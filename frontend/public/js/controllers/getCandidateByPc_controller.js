@@ -5,14 +5,12 @@ $scope.getCandidates = function(){
     var searchCandidate = $http.jsonp(url)
                 .success(function(candidate) {
                  $scope.candidates = candidate
-                 // console.log($scope.candidates)
                  // candidates.forEach(function(singleCandidate){
                  //    $scope.listOfCandidates.push(singleCandidate)
                     
                  // })
-                 
-                 console.log($scope.candidates, 'llll')
-                 console.log($scope.candidates.constituency)
+                    console.log($scope.candidates)
+                 console.log($scope.candidates.image)
                 })
                 //  .error(function(error) {
                 //   console.log('error in deleteController',error)
@@ -23,3 +21,6 @@ $scope.getCandidates()
 
 
 })
+
+
+// file:///images/mps/10298.jpg
