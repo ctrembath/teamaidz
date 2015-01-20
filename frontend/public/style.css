@@ -1,11 +1,18 @@
 * {
   font-family: 'Source Code Pro', serif;
+  background-color: #F9CB40;
 }
 div.header {
-  background-color: #9DDBAD;
+  background-color: #16DB65;
   height: 100px;
   width:100%;
   margin: 0px;
+}
+
+h1 {
+  padding: 40px;
+  opacity:0.4;
+  font-size:15px;
 }
 
 .text-muted {
@@ -88,12 +95,27 @@ input, input[placeholder]{
 
 
 // candidates //
-
-img.image-person {
-  margin-top: 3px;
-  height: 400px;
-  background-image: url(user.png);
+.candidate-name {
+  font-size:70px;
+  margin-bottom:0px;
 }
+
+p {
+  font-size: 30px;
+}
+
+.candidate-heading {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+
+div #candidate-image {
+  padding: 0px;
+  clear:both;
+}
+
+
 
 footer {
   position:fixed;
@@ -102,4 +124,8 @@ footer {
   width:100%;
   margin-bottom: 0px;
   background-color: #374B4A;
+  color: #F9CB40;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-size: 15px;
 }

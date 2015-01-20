@@ -12,11 +12,11 @@
 <body ng-controller = "getCandidatesByPC">
 <center>
 
-<div class="container">
+
     <div class="header">
-      <h2 class="text-muted" ng-href="#/StudentStopAIDS">
+      <h1> find your local candidate </h1>
     </div>
-</div>
+
 
 
 <div id="wrap-container">
@@ -27,22 +27,20 @@
 <!-- <div class="container" ng-repeat="contact in contacts | orderBy: 'first_name' | filter: searchContact "> -->
 <div class="container">
 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title">{{mpCandidate.full_name}}</h3>
+          <h3 class="candidate-name">{{mpCandidate.full_name}}</h3>
         </div>
-        <div class="panel-body">
-          <div class="row">
-             <img ng-src="http://www.theyworkforyou.com/images/mps/{{mpCandidate.person_id}}.jpg" class="image-circle" onError="this.src='images/user.png';" />
-                    <td>{{mpCandidate.party}}</td>                                   
-                    <td>{{mpCandidate.constituency}}</td>
-                    <td><a href="mailto:{{contact.email}}"> <img src="images/twitter.png"> </a> </td>
+
+          <div id="candidate-image">
+             <img ng-src="http://www.theyworkforyou.com/images/mps/{{mpCandidate.person_id}}.jpg" class="img-circle" onError="this.src='images/user.png';" /><br>
+          </div>
+                    <p>{{mpCandidate.party}}</p>                                   
+                    <tr>{{mpCandidate.constituency}}</tr><br>
+                    <tr><a href="mailto:{{contact.email}}"> <img src="images/twitter.png"> </a> </tr>
                   {{myError}}
                   </tr>
 
                 </tbody>
-              
-            </div>
+
           </div>
 
   
@@ -51,7 +49,7 @@
 
 
 <footer>
-        
+  student stop aids©
 </footer>
 
 
