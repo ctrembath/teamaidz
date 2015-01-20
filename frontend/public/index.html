@@ -6,6 +6,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
 </head>
 <body ng-controller = "getCandidatesByPC">
     <!-- <ng-repeat="for candidate in listOfCandidates"> -->
@@ -15,18 +17,26 @@
       <h2 class="text-muted" ng-href="#/StudentStopAIDS">StudentStopAIDSLINK</a></h2>
     </div>
 </div>
+<center>
 <div class="container">
     <div class="row">
-        <div class="span12">
-            <form id="custom-search-form" class="form-search form-horizontal pull-right">
+        <div class="span6">
+            <form id="custom-search-form" class="form-search form-horizontal">
                 <div class="input-append span12">
-                    <input type="text" class="search-query" placeholder="Search contact">
+                    <input type="text" class="search-query" placeholder="enter postcode">
                     <button type="submit" class="btn"><i class="icon-search"></i></button>
                 </div>
             </form>
         </div>
+
     </div>
 </div>
+</center>
+
+
+<footer>
+        <img id="logo" src="images/aids.jpg">
+</footer>
 <!-- <div class="container" ng-repeat="contact in contacts | orderBy: 'first_name' | filter: searchContact ">
 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
 

@@ -1,0 +1,58 @@
+* {
+  font-family: 'Source Code Pro', serif;
+}
+div.header {
+  background-color: #9DDBAD;
+  height: 100px;
+  width:100%;
+  margin: 0px;
+}
+
+.text-muted {
+  color: black;
+}
+
+#logo {
+ height: 80px;
+  width: 250px;
+  float:left;
+}
+
+footer {
+  position:fixed;
+  height:100px;
+  bottom:0px;
+  width:100%;
+  margin-bottom: 0px;
+  background-color: white;
+}
+
+form #custom-search-form {
+  margin-right: 50%;
+  margin-left: 50%;
+}
+.search {
+  position: static;
+  width: 70%;
+  height: 50px;
+  opacity: 0.8;
+}
+
+.wrap-container {
+  border: 3px solid white;
+  margin-left: 5000px;
+  margin-right: auto;
+}
+
+.wrapper {
+  height: 200px;
+  width: 250px;
+  float: left;
+}
+
+.search-query {
+  position: static;
+  width: 70%;
+  height: 50px;
+  opacity: 0.8;
+}
