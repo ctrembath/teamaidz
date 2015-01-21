@@ -1,5 +1,5 @@
 html, body {
-  height:100%;
+  
   overflow:hidden;
   font-family: 'Source Code Pro', serif;
 }
@@ -40,12 +40,13 @@ a {
   display:block;
   height: 100%;
   font-family: 'Source Code Pro', serif;
-  font-size:3em;
+  font-size:0.8em;
   text-decoration:none;
-  text-indent:500px;
+  text-align: center;
 }
 
 .prompt-remove {
   background: rgba(255,255,150,0.4);
-  transform:translateX(-1000px);
+  /*transform:translateX(-100%);*/
+  -webkit-transform: translateX(-100%);
 }
