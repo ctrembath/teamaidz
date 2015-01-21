@@ -27,13 +27,27 @@ ul li {
   list-style-type:none;
   height: 50px;
   display:block;
-  background: rgba(240,423,105,0.9);
+  background: #7AFDD6;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #666;
   transition:transform 0.3s ease-out, background-color 0.3s ease-out;
 }
 
+ul li:nth-child(2){
+  background:#FF8360;
+}
 
+ul li:nth-child(3){
+  background:#E0FBFC
+}
+
+ul li:nth-child(4){
+  background: #5EFC8D
+}
+
+ul li:nth-child(5){
+  background: #93BEDF;
+}
 
 a {
   color: #333;
