@@ -21,7 +21,7 @@
 
 <div id="wrap-container">
             <form id="search-form" ng-submit="getCandidates()">
-                    <input type="text" placeholder="enter your postcode" ng-model="postCode"/>
+                    <input type="text" placeholder="enter postcode" ng-model="postCode"/>
             </form>
 
 <!-- <div class="container" ng-repeat="contact in contacts | orderBy: 'first_name' | filter: searchContact "> -->
@@ -34,13 +34,11 @@
              <img ng-src="http://www.theyworkforyou.com/images/mps/{{mpCandidate.person_id}}.jpg" class="img-circle" onError="this.src='images/user.png';" /><br>
           </div>
                     <p>{{mpCandidate.party}}</p>                                   
-                    <tr>{{mpCandidate.constituency}}</tr><br>
-                    <tr><a href="mailto:{{contact.email}}"> <img src="images/twitter.png"> </a> </tr>
+                    <p>{{mpCandidate.constituency}}</p>
                   {{myError}}
-                  </tr>
-
-                </tbody>
-
+                
+                    <div class="round-button" ngHide=()><div class="round-button-circle"><a href="http://example.com" class="round-button">would you rather?</a></div></div>
+               
           </div>
 
   
