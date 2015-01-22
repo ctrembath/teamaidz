@@ -127,12 +127,26 @@ a:nth-child(3) {
 @media only screen and (min-height : 500px) {
        ul li{
         height: 200px;
-        font-size: 150%;
-
+        font-size: 200%;
     }
-
+    
 }
 
+@media only screen and (min-width : 600px) {
+   #locked {
+    padding-right: 20px;
+    padding-top: 50px;
+    height: 70px;
+    width: 70px;
+   }
+   #unlocked {
+    padding-right: 20px;
+    padding-top: 50px;
+    height: 70px;
+    width: 70px;
+   }
+
+}
 @media only screen and (min-width : 480px) {
     ul li {
         height: 200px;
