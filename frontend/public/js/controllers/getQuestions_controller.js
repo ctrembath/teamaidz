@@ -8,12 +8,10 @@ $scope.getQuestions = function(){
         $scope.questions = []
         $scope.allQuestions = response.questions
         $scope.allQuestions.forEach(function(singleQuestion){
-        	$scope.questions.push(singleQuestion.ask_text)
-            
+     	$scope.questions.push(singleQuestion.ask_text)            
         })
     })
 }
-
 
 $scope.getQuestions()
 

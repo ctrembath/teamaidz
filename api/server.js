@@ -47,6 +47,10 @@ app.get('/questions', function(req, res){
 	res.render('questions.html')
 });
 
+app.get('/answers', function(req, res){
+	res.render('answers.html')
+});
+
 
 server.listen(port, function() {
   console.log('Im an express server listening at port',port);
