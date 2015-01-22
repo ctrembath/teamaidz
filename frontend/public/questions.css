@@ -1,73 +1,85 @@
-html, body {
-  
-  overflow:hidden;
-  font-family: 'Source Code Pro', serif;
+html,body {
+    overflow:hidden;
+    font-family:'Source Code Pro',serif;
+    margin-top: 0px;
+    padding: 0;
 }
+
 body {
-  background: #111;
-  color:#aaa;
-  font-family: Arial, sans-serif;
-  margin:0;
+    font-family:Arial,sans-serif;
+    margin:0
+}
+
+header {
+    margin-top: -18px;
+    margin-bottom:-17px;
+    background-color:#00ff85;
+}
+
+h1 {
+    font-family:'Source Code Pro',serif;
+    font-size: 30px;
+    text-align: center;
+    font-color: black;
 }
 
 #wrap {
-  background: linear-gradient(to bottom, rgba(135,153,255,1) 0%,rgba(233,60,236,1) 100%);
-  overflow:hidden;
-  margin: 0 auto;
+    background:linear-gradient(to bottom,rgba(135,153,255,1) 0%,rgba(233,60,236,1) 100%);
+    overflow:hidden;
+    margin:0 auto
 }
 
 ul {
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0
 }
 
 ul li {
-  margin:0;
-  padding:0;
-  list-style-type:none;
-  height: 50px;
-  display:block;
-  background: #18FFF4;
-  -webkit-transition: -webkit-transform 0.4s ease-out, background-color 0.3s ease-out;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    height:50px;
+    display:block;
+    background:#18FFF4;
+    -webkit-transition:-webkit-transform .4s ease-out,background-color .3s ease-out
 }
 
 ul li:active {
-  -webkit-transition: -webkit-transform 0.4s ease-out, background-color 0.3s ease-out;
+    -webkit-transition:-webkit-transform .4s ease-out,background-color .3s ease-out
 }
 
-ul li:nth-child(2){
-  background:#FF4B00;
+ul li:nth-child(2) {
+    background:#FF4B00
 }
 
-ul li:nth-child(3){
-  background:#F4FF00;
+ul li:nth-child(3) {
+    background:#F4FF00
 }
 
-ul li:nth-child(4){
-  background: #27FF22;
+ul li:nth-child(4) {
+    background:#27FF22
 }
 
-ul li:nth-child(5){
-  background: #93BEDF;
+ul li:nth-child(5) {
+    background:#93BEDF
 }
 
 a {
-  color: #333;
-  display:block;
-  height: 100%;
-  font-family: 'Source Code Pro', serif;
-  font-size:0.8em;
-  text-decoration:none;
-  text-align: center;
+    color:#333;
+    display:block;
+    height:100%;
+    font-family:'Source Code Pro',serif;
+    font-size:.8em;
+    text-decoration:none;
+    text-align:center
 }
 
 a:nth-child(3) {
-  font-color:white;
+    font-color:#fff
 }
 
 .prompt-remove {
-  background: rgba(255,255,150,0.4);
-  /*transform:translateX(-100%);*/
-  -webkit-transform: translateX(-100%);
-
+    background:rgba(255,255,150,0.4);
+/*transform:translateX(-100%);*/
+    -webkit-transform:translateX(-100%)
 }

@@ -10,6 +10,11 @@
 <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<header>
+
+  <h1>W O U L D - Y O U - R A T H E R ..</h1>
+</header>
 <div id="wrap"></div>
 
 <script>
@@ -38,46 +43,25 @@ $(function() {
   // Ensure the items handle screen reszing
   $(window).on('resize', sizeItems).trigger('resize');
  
-  
-  /** 
-   * Set up a swipe gesture.  Hammer has a 'swipe' event but
-   * it's not particularly reliable in my experience, so I fake it
-   * by detecting drags and deciding if it was a swipe based on the distance.
-   *
-   * Note that this just takes distance into account - you could do a slow drag 
-   * and it would still get picked up as a 'swipe' using this method. You would
-   * need to get time deltas between the drag start and end if you wanted to check
-   * the speed of the drag as well.
-  **/
+
   
   var self = this;
   
-  // We're going to bind the drag event listener to the list container. Hammer doesn't
-  // understand jQuery collections so we need to use the raw DOM element reference.
   var listContainer = $list[0];
   
-  // Events will bubble up the DOM and fire on all the elements we drag over, but
-  // we only want to react to the event if the user performs it inside a list item.
-  // This var stores a reference to selector we'll be checking for.
   var targetSelector = 'ul li';
-  
-  // To prevent errant taps/clicks being interpreted as drags, we only want to
-  // react to drags of 100px or more.
+
   var threshold = 100;
-  
-  // Now we bind the event to the list container.
+
   Hammer(listContainer).on('drag', function(e) {
     
-    // Some vars we will use later to see if we dragged the right element
     var isDraggingTarget = false,
         isDraggingChildOfTarget = false,
         draggedParents = false;
     
-    // Get the element on which the 'drag' event has just fired
-    // and wrap it in a jQuery object for convenience
     var dragged = $(e.target);
      
-    // Check to see if we dragged the element we want directly
+
     isDraggingTarget = dragged.is(targetSelector);
     
     // If we havent' dragged the element we want, we might be dragging
@@ -93,13 +77,13 @@ $(function() {
     if(isDraggingTarget || isDraggingChildOfTarget) {
       
       // Events bubble up the DOM so we need to stop this, as we already know
-      // what we need to know
-      e.stopPropagation();
+      // // what we need to know
+      // e.stopPropagation();
       
       // Drag/swipe events have side-effects on some OSes e.g. task switching etc,
       // so we want to kill that behaviour here
-      e.preventDefault();
-      e.gesture.preventDefault();
+      // e.preventDefault();
+      // e.gesture.preventDefault();
 
       // We want to work just our target element - that's either the one we dragged
       // directly, or the parent we discovered was actually the target.
