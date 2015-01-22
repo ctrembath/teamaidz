@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="QanMP">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width initial-scale=1">
 <link rel="stylesheet" href="questions.css">
 <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
 </head>
@@ -9,13 +9,13 @@
 <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 
-<header>
 
-  <h1>W O U L D - Y O U - R A T H E R ..</h1>
-</header>
 
 <body ng-controller="getQuestions">
+<header>
 
+  <h1>WOULD - YOU - RATHER ..</h1>
+</header>
 <div id="wrap">
 <ul>
 <li ng-repeat="question in questions" onclick="lockQuestion()">
