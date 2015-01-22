@@ -17,14 +17,24 @@
 </header>
 <div id="wrap">
 <ul>
-<li ng-repeat="question in questions">
-<img id="unlocked" ng-src="/images/unlock.png" width="28" height="28" ng-click="lockQuestion()">
-<!-- add here the ngclick for changing the image -->
-<!-- <img id="unlocked" src="/images/unlock.png"> -->{{question}}
+
+
+<!-- each image should have a different id -->
+<li ng-repeat="question in questions" onclick="lockQuestion()">
+<img id="unlocked" src="/images/unlock.png" width="28" height="28" >
+{{question}}
 </li>
-<!-- <img id="locked" src="/images/lock.png"> -->
 </ul>
 </div>
+<script>
+var lockQuestion = function(){
+	// toLock = $(this).attr("id", "gioID")
+	document.getElementById("unlocked").src = "/images/lock.png"
+	document.getElementById("unlocked").id = "locked"
+
+}
+
+</script>
       <script src="/bower_components/angular/angular.js"></script>
       <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
       <script src="/bower_components/angular-route/angular-route.min.js"></script>

@@ -9,6 +9,7 @@ $scope.getQuestions = function(){
         $scope.allQuestions = response.questions
         $scope.allQuestions.forEach(function(singleQuestion){
         	$scope.questions.push(singleQuestion.ask_text)
+            
         })
     })
 }
@@ -16,9 +17,9 @@ $scope.getQuestions = function(){
 
 $scope.getQuestions()
 
-$scope.lockQuestion = function(){
-    console.log('ciao clare I am a blocked lock')
-}
+// $scope.lockQuestion = function(){
+//     console.log('ciao clare I am a blocked lock')
+// }
 
 
 

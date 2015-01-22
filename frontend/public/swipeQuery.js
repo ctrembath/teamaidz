@@ -1,6 +1,6 @@
 var swipe = function() {
     var listContainer = document.getElementById('wrap');
-    console.log(listContainer, 'hi clare!!')
+    // console.log(listContainer, 'hi clare!!')
     var targetSelector = 'ul li';
     var threshold = 100;
     // $.(window).on('resize', sizeItems).trigger('resize');
