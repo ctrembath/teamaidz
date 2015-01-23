@@ -14,9 +14,10 @@
 
 
 
-    <div class="header">
-      <h1> find your local candidate </h1>
-    </div>
+<header>
+
+  <h1>WOULD - YOU - RATHER ..</h1>
+</header>
 
 <div id="wrap-container">
             <form id="search-form" ng-submit="getCandidates()">
@@ -33,11 +34,11 @@
              <img ng-src="http://www.theyworkforyou.com/images/mps/{{mpCandidate.person_id}}.jpg" class="img-circle" onError="this.src='images/user.png';" /><br>
 
           </div>
-                    <p>{{mpCandidate.party}}</p>                                   
-                    <p>{{mpCandidate.constituency}}</p>
+                    <h2>{{mpCandidate.party}}</h2>                                   
+                    <h2>{{mpCandidate.constituency}}</h2>
                   {{myError}}
                 
-                    <div class="round-button" onclick="change()"><div class="round-button-circle"><a href="questions.html" class="round-button" onmouseover="changeButtonPlaceHolder()">search?</a></div></div>       
+                    <div class="round-button" onclick="change()"><a href="questions.html" class="round-button" onmouseover="changeButtonPlaceHolder()"><p class="text-cucumber"></p></a></div></div>       
           </div> 
         </div>
 </center>
@@ -62,12 +63,13 @@
     else elem.value = "Close Curtain";
       }
 
-            var  changeButtonPlaceHolder = function(){
+      var  changeButtonPlaceHolder = function(){
       var myNewButton = document.getElementsByClassName('round-button')[1]
-      myNewButton.innerHTML = "Go To Questions";
+      myNewButton.innerHTML = ;
         }
 
       </script>
+      
 
 
 </body>
