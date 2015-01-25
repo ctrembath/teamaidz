@@ -4,21 +4,24 @@
 }
 
 header {
-    position: fixed;
     margin-bottom:0px;
     background-color:#00ff85;
     width: 100%;
+    clear:both;
 }
 
 h1 {
     font-family:'Source Code Pro',serif;
-    font-size: 18px;
+    font-size: 38px;
     text-align: center;
     font-color: black;
     letter-spacing: 0.5em;
 
 }
 
+li {
+  margin-top: 50px;
+}
 
 form {
   margin-top:50px;
