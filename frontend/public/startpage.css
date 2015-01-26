@@ -1,0 +1,114 @@
+*{
+  font-family:'Source Code Pro',serif;
+}
+
+header {
+    margin-bottom:0px;
+    background-color:#00ff85;
+    width: 100%;
+    clear:both;
+}
+
+h1 {
+    font-family:'Source Code Pro',serif;
+    font-size: 38px;
+    text-align: center;
+    font-color: black;
+    letter-spacing: 0.5em;
+
+}
+
+p {
+  font-size: 40px
+}
+
+.container-green {
+  width:100%;
+  background-color: #0F8065;
+  opacity: 0.8;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.color-1 {
+  background-color:  #f2b844;
+  border:1px solid white;
+}
+
+.container-blue {
+  width: 100%;
+  background-color: #237070;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em 2em;
+}
+
+.block {
+  height: 60px;
+  width: 100%;
+}
+
+a {
+  border-radius: 50px;
+  border: medium none;
+  border-color: white;
+  padding: 2.2em 2.3em;
+  color: white;
+  font-size: 0.8em;
+  font-family: 'Open Sans', Verdana;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* Color Variables */
+
+/*$green: #14AD80;
+$blue: #339499;
+$red: #DC6957;
+$amber: #f2b844;
+
+/* Button Colors */
+
+$green-button: #0F8065;
+$blue-button: #237070;
+$red-button: #A34F41;
+$amber-button: #da970f;
+
+$green-hov: #0E725A;
+$blue-hov: #236F6F;
+$red-hov: #97493B;
+$amber-hov: #c2860d;
+
+
+*/
+
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em 0;
+}
+
+/* Icon Font*/
+
+
+
+/* Button Styling */
+
+
+
+/* Background Colors*/
+
+
+

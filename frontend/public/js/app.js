@@ -1,4 +1,4 @@
-angular.module('qAnMp', []);
+var app = angular.module('qAnMp', []);
 
   // QanMP.config(function($httpProvider) {
   //     $httpProvider.defaults.useXDomain = true;

@@ -1,53 +1,39 @@
 <!DOCTYPE html>
 <html ng-app="qAnMp">
 <head>
-<meta name="viewport" content="width=device-width initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="questions.css">
 <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
-<script src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.1.3/hammer.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
-
-
 <body ng-controller="getQuestions">
-
-<header>
-
-  <h1>WOULD - YOU - RATHER ..</h1>
-</header>
-
-<div id="test"></div>
-<div id="wrap">
-<ul>
-<li ng-repeat="question in questions">
-<img id="unlocked" src="/images/unlock.png" width="28" height="28" onclick="lockQuestion()">
-{{question}}
-</li>
-</ul>
-
+<div class="container">
+    <div class="row">
+        <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+            <ul class="event-list">
+                <li ng-repeat="question in questions | orderBy : 'priority' | limitTo : display" >
+                    <time datetime="{{myDate | date:'mediumDate'}}">
+                        <span class="day">{{myDate | date: 'dd'}}</span>
+                        <span class="month">{{myDate | date: 'MMM'}}</span>
+                        <span class="year">{{myDate | date: 'yyyy'}}</span>
+                    </time>
+                    <img id="unlocked" ng-src="{{question.imgSrc}}" ng-click="lockQuestion(question)">
+                    <div class="info" ng-click="newQuestion(question)">
+                        <h2 class="title">Would you rather...</h2>
+                        <;p class="desc">{{question.wording}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
+  <button type="button" class="btn btn-primary" ng-show="isReadyToSubmit()" ng-click= "postQuestion()"> Sumbit your questions </button>
+      <script src="/bower_components/angular/angular.js"></script>
 
-<footer>
-<center>
-<a href="answers.html" ><img class="answer-button" src="images/button.png" /></a>
-</center></footer>
-
-<button ng-click="postQuestion()"> Submit</button>
-<button onclick="setLockDefault()">Locked?</button>
-
->>>>>>> 
-      <script src="/bower_components/angular/angular.js"></script>
-      <!-- scripts.js -->
-      <script src="js/app.js"></script>
-      <script src="js/app.config.js"></script>
-      <script src="swipeQuery.js"></script>
-      <!-- <script src="js/services/contacts_service.js"></script> -->
-      <script src="js/controllers/getQuestions_controller.js"></script>
-
-
+      <!-- scripts.js -->
+      <script src="js/app.js"></script>
+      <script src="js/app.config.js"></script>
+      <script src="js/controllers/getQuestions_controller.js"></script>
 </body>
-
 </html>
-

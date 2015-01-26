@@ -1,16 +1,10 @@
 
-// angular.module('alliantsApp').config(["$routeProvider", function($routeProvider) {
-    
-//     $routeProvider
 
-//     .when('/', {
-//         templateUrl: 'views/main.html',
-//         controller: 'contactsController'
-//     })
 
-    
-//     .otherwise({
-//         redirectTo: '/'
-//     })
-  
-// }]);
+app.config(['$httpProvider', function ($httpProvider) {
+  //Reset headers to avoid OPTIONS request (aka preflight)
+  $httpProvider.defaults.headers.common = {};
+  $httpProvider.defaults.headers.post = {};
+  $httpProvider.defaults.headers.put = {};
+  $httpProvider.defaults.headers.patch = {};
+}]);

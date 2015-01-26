@@ -4,6 +4,7 @@ $scope.getCandidates = function(){
     var searchCandidate = $http.jsonp(url)
                 .success(function(candidate) {
                  $scope.mpCandidate = candidate
+                 console.log($scope.mpCandidate)
                 })
                  .error(function(error) {
                   // console.log('error in getCandidatesByPC',error)
@@ -13,5 +14,6 @@ $scope.getCandidates = function(){
                 })                
 }
   $scope.getCandidates()
+
 
 })
