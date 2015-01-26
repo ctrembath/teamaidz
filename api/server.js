@@ -11,12 +11,20 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stopAIDSapp');
 var db = mongoose.connection;
 mongoose.set('debug', true);
-var Question = require('./models/Question');
-var question;
-question = new Question({boby: 'I am the first question'});
-question2 = new Question({boby: 'I am the second question'})
-question.save()
-question2.save()
+
+// var Question = require('./models/Question');
+// var question;
+// question = new Question({boby: 'I am the first question'});
+// question2 = new Question({boby: 'I am the second question'})
+// question.save()
+// question2.save()
+
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+  next();
+})
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -27,10 +35,10 @@ app.engine('html', require('ejs').renderFile);
 app.use(express.static(path.join(__dirname + "./../frontend/public")));
 
 
-Question.findOne({"boby" : "I am the second question"}, function(err, theQuestion){
-	if(err) return console.log(err);
-	console.log("success", theQuestion)
-})
+// Question.findOne({"boby" : "I am the second question"}, function(err, theQuestion){
+// 	if(err) return console.log(err);
+// 	console.log("success", theQuestion)
+// })
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
@@ -44,11 +52,11 @@ app.get('/', function(req, res) {
 
 
 app.get('/questions', function(req, res){
-	res.render('questions.html')
+	res.render('questions.html');
 });
 
 app.get('/answers', function(req, res){
-	res.render('answers.html')
+	res.render('answers.html');
 });
 
 

@@ -1,8 +1,6 @@
 var swipe = function() {
 // IF LOCK IS FALSE
-
     var listContainer = document.getElementById('wrap');
-    // console.log(listContainer, 'hi clare!!')
     var targetSelector = 'ul li';
     var threshold = 100;
 
@@ -11,18 +9,32 @@ var swipe = function() {
             isDraggingChildOfTarget = false,
             draggedParents = false;
         var dragged = $(e.target);
-        console.log(dragged, 'i am dragged')
+        // console.log('whole element', e)
+        // console.log('target', e.target)
+        
+
         isDraggingTarget = dragged.is(targetSelector);
 
         if (!isDraggingTarget) {
+            console.log('inside first if')
             draggedParents = dragged.parents(targetSelector);
             isDraggingChildOfTarget = draggedParents.length;
         }
+
+
+        // e.class === blocked 
+        // console.log('swiping in a block element', e.target)
+        // return
+
+
+        
         if (isDraggingTarget || isDraggingChildOfTarget) {
+            // console.log('io sono', e)
             e.stopPropagation();
             e.preventDefault();
             e.gesture.preventDefault();
             var el = (isDraggingChildOfTarget) ? draggedParents : dragged;
+            // console.log('el', el)
             var dragDistance = e.gesture.deltaX;
 
             if (dragDistance > threshold) {
@@ -36,10 +48,19 @@ var swipe = function() {
         }
     });
 }
+
 swipe()
 
-var lockQuestion = function(){
-	console.log(document.getElementById("unlocked"))
-	document.getElementById("unlocked").src = "/images/lock.png"
-	document.getElementById("unlocked").id = "locked"
+
+var lockQuestion = function() {
+    $("li").click(function() {
+        this.firstChild.nextSibling.id = 'locked'
+        this.firstChild.nextSibling.src = 'http://localhost:3000/images/lock.png'
+    });
 }
+
+var setLockDefault = function(){
+      $('li').attr('locked', false);
+      console.log($('li')[1].attributes[3].value)
+}
+

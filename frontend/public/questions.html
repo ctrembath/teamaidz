@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="QanMP">
+<html ng-app="qAnMp">
 <head>
 <meta name="viewport" content="width=device-width initial-scale=1">
 <link rel="stylesheet" href="questions.css">
@@ -12,34 +12,42 @@
 
 
 <body ng-controller="getQuestions">
+
 <header>
 
   <h1>WOULD - YOU - RATHER ..</h1>
 </header>
+
+<div id="test"></div>
 <div id="wrap">
 <ul>
-<li ng-repeat="question in questions" onclick="lockQuestion()">
-<img id="unlocked" src="/images/unlock.png" width="28" height="28" >
+<li ng-repeat="question in questions">
+<img id="unlocked" src="/images/unlock.png" width="28" height="28" onclick="lockQuestion()">
 {{question}}
 </li>
 </ul>
+
 </div>
 
 <footer>
 <center>
 <a href="answers.html" ><img class="answer-button" src="images/button.png" /></a>
 </center></footer>
+
+<button ng-click="postQuestion()"> Submit</button>
+<button onclick="setLockDefault()">Locked?</button>
+
+>>>>>>> 
       <script src="/bower_components/angular/angular.js"></script>
-      <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
-      <script src="/bower_components/angular-route/angular-route.min.js"></script>
       <!-- scripts.js -->
       <script src="js/app.js"></script>
       <script src="js/app.config.js"></script>
       <script src="swipeQuery.js"></script>
-			<!-- <script src="js/services/contacts_service.js"></script> -->
+      <!-- <script src="js/services/contacts_service.js"></script> -->
       <script src="js/controllers/getQuestions_controller.js"></script>
+
+
 </body>
 
 </html>
-
 
